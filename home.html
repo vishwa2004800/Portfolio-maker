@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Maker</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Montserrat", sans-serif;
+        background: linear-gradient(to right, #6a11cb, #2575fc);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+
+      .container {
+        text-align: center;
+        max-width: 1200px;
+        padding: 20px;
+      }
+
+      .title {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        animation: fadeIn 2s ease-in-out;
+      }
+
+      .subtitle {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        animation: fadeIn 2s ease-in-out 0.5s;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 15px 30px;
+        font-size: 1rem;
+        font-weight: 700;
+        color: #fff;
+        text-decoration: none;
+        background: #22c55e;
+        border-radius: 30px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+        animation: fadeIn 2s ease-in-out 1s;
+      }
+
+      .btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .animation-row {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 80px;
+        animation: fadeIn 2s ease-in-out 1.5s;
+        flex-wrap: wrap;
+      }
+
+      .animation {
+        flex: 1;
+        max-width: 600px;
+        min-height: 200px;
+        transition: transform 0.3s;
+      }
+
+      .animation img {
+        width: 100%;
+
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        animation: float 3s infinite ease-in-out;
+        object-fit: cover;
+      }
+
+      .animation:hover {
+        transform: scale(1.05);
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .animation-row {
+          flex-direction: column;
+          gap: 30px;
+        }
+
+        .animation {
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <h1 class="title">Portfolio Maker</h1>
+        <p class="subtitle">
+          Create a stunning portfolio in just a few clicks!
+        </p>
+        <a
+          href="{{url_for('design')}}"
+          class="btn btn-success"
+          style="padding: 15px; margin-top: 24px"
+          >Start making</a
+        >
+      </div>
+      <div class="animation-row">
+        <div class="animation">
+          <img src="static/design1.png" alt="Animated Portfolio 1" />
+        </div>
+        <div class="animation">
+          <img src="static/design2.png" alt="Animated Portfolio 2" />
+        </div>
+        <div class="animation">
+          <img src="static/design3.png" alt="Animated Portfolio 3" />
+        </div>
+        <div class="animation">
+          <img src="static/design4.png" alt="Animated Portfolio 3" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

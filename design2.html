@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design 2</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background-color: #eaeaf2;
+      }
+
+      .hero {
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 24px;
+        font-weight: 600;
+        color: #000;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        padding: 0;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        font-size: 16px;
+        color: #000;
+        transition: color 0.3s;
+      }
+
+      .nav-links a.active {
+        font-weight: 600;
+        color: #6c63ff;
+      }
+
+      .nav-links a:hover {
+        color: #6c63ff;
+      }
+
+      .hero-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 50px;
+      }
+
+      .hero-image {
+        border-radius: 50%;
+        width: 500px;
+        height: 500px;
+        object-fit: cover;
+      }
+
+      .hero-text h2 {
+        font-size: 48px;
+        font-weight: 600;
+        color: #000;
+        margin: 0;
+      }
+
+      .hero-text h2::after {
+        content: "";
+        display: block;
+        width: 100px;
+        height: 6px;
+        background-color: #6c63ff;
+        margin-top: 10px;
+      }
+
+      .hero-text p {
+        font-size: 18px;
+        color: #333;
+        margin-top: 20px;
+        max-width: 400px;
+      }
+      .offerings {
+        padding: 50px 20px;
+        text-align: center;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .section-title {
+        font-size: 36px;
+        font-weight: 600;
+        color: #000;
+      }
+
+      .section-title span {
+        color: #6c63ff;
+      }
+
+      .section-description {
+        font-size: 16px;
+        font-weight: 300;
+        color: #666;
+        margin: 10px 0 40px;
+      }
+
+      .cards {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        max-width: 300px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+      }
+
+      .icon {
+        font-size: 40px;
+        background: #e6eaff;
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        color: #6c63ff;
+      }
+
+      .card h3 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #000;
+      }
+
+      .card p {
+        font-size: 14px;
+        font-weight: 300;
+        color: #666;
+        margin-top: 10px;
+      }
+      .footer {
+        background-color: #222;
+        color: #fff;
+        padding: 40px 20px;
+        text-align: left;
+        font-family: Arial, sans-serif;
+      }
+
+      .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .footer-section {
+        flex: 1 1 200px;
+        margin: 10px;
+      }
+
+      .footer-section h2 {
+        font-size: 18px;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #555;
+        display: inline-block;
+        padding-bottom: 5px;
+      }
+
+      .footer-section p {
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .footer-section ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-section ul li {
+        margin-bottom: 10px;
+      }
+
+      .footer-section ul li a {
+        color: #ccc;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .footer-section ul li a:hover {
+        color: #fff;
+      }
+
+      .footer-section.social a {
+        margin: 5px;
+        display: inline-block;
+      }
+
+      .footer-section.social img {
+        width: 30px;
+        height: 30px;
+        transition: transform 0.3s ease;
+      }
+
+      .footer-section.social img:hover {
+        transform: scale(1.2);
+      }
+
+      .footer-bottom {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 14px;
+        color: #aaa;
+      }
+
+      @media (max-width: 768px) {
+        .footer-container {
+          flex-direction: column;
+        }
+
+        .footer-section {
+          margin-bottom: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="container">
+        <nav class="navbar">
+          <h1 class="logo">{{dname}}</h1>
+          <ul class="nav-links">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Podcast</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="hero-content">
+          <img src="static/profile.jpg" alt="Olivia" class="hero-image" />
+          <div class="hero-text">
+            <h2>Hello!</h2>
+            <p>
+              I'm {{dname}}. Computer Science Engineer. Welcome to my personal
+              blog.
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="offerings">
+      <div class="container">
+        <h1 class="section-title">Explore <span>My Projects</span></h1>
+        <p class="section-description">
+          Build Multiple Projects which have helped me improve my Techical
+          Skills and Knowledge
+        </p>
+        <div class="cards">
+          <div class="card">
+            <div class="icon">💻</div>
+            <h3 id="projectone">E-Commerce Website</h3>
+            <p>
+              Crafting seamless and intuitive user journeys to enhance
+              engagement and satisfaction.
+            </p>
+          </div>
+          <div class="card">
+            <div class="icon">💻</div>
+            <h3 id="projecttwo">Traveller's Guide App</h3>
+            <p>
+              Creating visually appealing interfaces that combine aesthetics
+              with functionality.
+            </p>
+          </div>
+          <div class="card">
+            <div class="icon">💻</div>
+            <h3 id="projectthree">Flask Website</h3>
+            <p>
+              Transforming concepts into tangible prototypes to validate ideas
+              and iterate quickly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- courses section -->
+    <section class="offerings">
+      <div class="container">
+        <h1 class="section-title">Explore <span>Courses</span></h1>
+        <p class="section-description">
+          Completed Various Courses with consistency and dedication
+        </p>
+        <div class="cards">
+          <div class="card">
+            <div class="icon">💻</div>
+            <h3>Web Development</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+              deleniti quasi dolores fugit voluptas ipsum unde, assumenda porro
+              molestias eius facere odit aspernatur aut, velit adipisci autem
+              numquam consequatur nam.
+            </p>
+          </div>
+          <div class="card">
+            <div class="icon">💻</div>
+            <h3>Mobile Development</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+              tempore quos itaque eos aliquam, reiciendis nemo libero dolor, ad
+              suscipit consequatur est impedit autem? Similique et culpa ea
+              ipsam voluptatum.
+            </p>
+          </div>
+          <div class="card">
+            <div class="icon">💻</div>
+            <h3>Machine Learning</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Similique omnis officiis aspernatur molestiae aliquid, rerum odio
+              debitis vero maxime molestias temporibus sint? Necessitatibus
+              nobis repudiandae distinctio.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- About Section -->
+        <div class="footer-section about">
+          <h2>About Us</h2>
+          <p>{{dabout}}</p>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="footer-section links">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="footer-section contact">
+          <h2>Contact Me</h2>
+          <p>Email: {{demail}}</p>
+          <p>Phone: {{dphone}}</p>
+          <p>Address: 123 Main Street, Anytown, USA</p>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="footer-section social">
+          <h2>Follow me</h2>
+          <br />
+          <a href="#"><img src="static/fb.png" alt="Facebook" /></a>
+
+          <a href="#"><img src="static/twit.png" alt="Twitter" /></a>
+          <a href="#"><img src="static/linkedin.webp" alt="LinkedIn" /></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Personal Portfolio Website. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

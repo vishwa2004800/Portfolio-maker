@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design 1</title>
+    <style>
+      body {
+        font-family: "Georgia", serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f5f0;
+        color: #333;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+        background-color: #ffffff;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .site-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+
+      .nav-links a {
+        margin-left: 30px;
+        text-decoration: none;
+        font-size: 1rem;
+        color: #333;
+      }
+
+      .nav-links a:hover {
+        text-decoration: underline;
+      }
+
+      .main-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 50px;
+        gap: 50px;
+      }
+
+      .image-container {
+        flex: 1;
+      }
+
+      .profile-image {
+        width: 100%;
+        border-radius: 5px;
+      }
+
+      .intro-container {
+        flex: 1;
+      }
+
+      .intro-container h2 {
+        font-size: 2.5rem;
+        line-height: 1.4;
+        margin-bottom: 20px;
+      }
+
+      .intro-container p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        color: #555;
+      }
+
+      .view-work {
+        background-color: transparent;
+        border: 2px solid #333;
+        color: #333;
+        padding: 10px 20px;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      .view-work:hover {
+        background-color: #333;
+        color: #fff;
+      }
+      .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .portfolio-item {
+        width: calc(33.33% - 30px);
+        margin-bottom: 20px;
+      }
+
+      .portfolio-item img {
+        width: 100%;
+        height: 300px;
+        border-radius: 5px;
+      }
+
+      .portfolio-item h3 {
+        margin-top: 10px;
+        text-align: center;
+      }
+
+      .portfolio-item p {
+        margin-top: 5px;
+        text-align: center;
+        font-size: 0.8em;
+        color: #777;
+      }
+
+      .footer {
+        background-color: #222;
+        color: #fff;
+        padding: 40px 20px;
+        text-align: left;
+        font-family: Arial, sans-serif;
+      }
+
+      .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .footer-section {
+        flex: 1 1 200px;
+        margin: 10px;
+      }
+
+      .footer-section h2 {
+        font-size: 18px;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #555;
+        display: inline-block;
+        padding-bottom: 5px;
+      }
+
+      .footer-section p {
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .footer-section ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-section ul li {
+        margin-bottom: 10px;
+      }
+
+      .footer-section ul li a {
+        color: #ccc;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .footer-section ul li a:hover {
+        color: #fff;
+      }
+
+      .footer-section.social a {
+        margin: 5px;
+        display: inline-block;
+      }
+
+      .footer-section.social img {
+        width: 30px;
+        height: 30px;
+        transition: transform 0.3s ease;
+      }
+
+      .footer-section.social img:hover {
+        transform: scale(1.2);
+      }
+
+      .footer-bottom {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 14px;
+        color: #aaa;
+      }
+
+      @media (max-width: 768px) {
+        .footer-container {
+          flex-direction: column;
+        }
+
+        .footer-section {
+          margin-bottom: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <h1 class="site-title">Personal Portfolio</h1>
+      <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Clients</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <div class="image-container">
+        <img
+          src="static/images/{{img}}"
+          alt="Avery Davis"
+          class="profile-image"
+        />
+      </div>
+      <div class="intro-container">
+        <h2>
+          Hi! <br />
+          I'm {{dname}}
+        </h2>
+        <p>{{dabout}}</p>
+        <button class="view-work">View Work</button>
+      </div>
+    </main>
+
+    <h1 style="text-align: center">My Projects</h1>
+
+    <div class="container">
+      <div class="portfolio-item">
+        <img src="static/project1.jpg" alt="Project 1" />
+        <h3>{{dproject1}}</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+          tincidunt finibus diam. Nulla ornare moll.
+        </p>
+      </div>
+
+      <div class="portfolio-item">
+        <img src="static/project2.jpg" alt="Project 2" />
+        <h3>{{dproject2}}</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+          tincidunt finibus diam. Nulla ornare moll.
+        </p>
+      </div>
+
+      <div class="portfolio-item">
+        <img src="static/project3.jpg" alt="Project 3" />
+        <h3>{{dproject3}}</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+          tincidunt finibus diam. Nulla ornare moll.
+        </p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- About Section -->
+        <div class="footer-section about">
+          <h2>About Us</h2>
+          <p>{{dabout}}</p>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="footer-section links">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="footer-section contact">
+          <h2>Contact Me</h2>
+          <p>Email: {{demail}}</p>
+          <p>Phone: {{dphone}}</p>
+          <p>Address: 123 Main Street, Anytown, USA</p>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="footer-section social">
+          <h2>Follow me</h2>
+          <br />
+          <a href="#"><img src="static/fb.png" alt="Facebook" /></a>
+
+          <a href="#"><img src="static/twit.png" alt="Twitter" /></a>
+          <a href="#"><img src="static/linkedin.webp" alt="LinkedIn" /></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Personal Portfolio Website. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

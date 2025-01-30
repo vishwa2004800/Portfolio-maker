@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Choose a Design</title>
+
+    <!-- Custom CSS -->
+    <style>
+      body {
+        font-family: 'Montserrat', sans-serif;
+        background: linear-gradient(to right, #6a11cb, #2575fc);
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-align: center;
+        margin: 50px 0;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      .row {
+        justify-content: center;
+      }
+
+      .card {
+        background-color: #fff;
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        margin: 20px;
+        width: 100%;
+        max-width: 350px;
+      }
+
+      .card img {
+        width: 100%;
+        border-bottom: 1px solid black;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .card-body {
+        text-align: center;
+      }
+
+      .btn {
+        background-color: rgb(152, 130, 134);
+        color: #fff;
+        font-weight: 600;
+        border-radius: 30px;
+        border-color: rgb(152, 130, 134);
+        transition: background-color 0.3s, transform 0.3s;
+      }
+
+      .btn:hover {
+        background-color: rgb(152, 130, 134);
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Choose a Design</h1>
+    <div class="container">
+      <div class="row">
+        <!-- Design 1 Card -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="/static/design1.png" alt="Design 1" />
+            <div class="card-body">
+              <form method="POST" action="/form/design1">
+                <button class="btn btn-success" type="submit">
+                  Choose this Design
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Design 2 Card -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="/static/design2.png" alt="Design 2" />
+            <div class="card-body">
+              <form method="POST" action="/form/design2">
+                <button class="btn btn-success" type="submit">
+                  Choose this Design
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Design 3 Card -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="/static/design3.png" alt="Design 3" />
+            <div class="card-body">
+              <form method="POST" action="/form/design3">
+                <button class="btn btn-success" type="submit">
+                  Choose this Design
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+          <!-- Design 4 Card -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="/static/design4.png" alt="Design 3" />
+            <div class="card-body">
+              <form method="POST" action="/form/design3">
+                <button class="btn btn-success" type="submit">
+                  Choose this Design
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        
+          <!-- Design 5 Card -->
+
+        <div class="col-md-4">
+          <div class="card">
+            <img src="/static/design5.png" alt="Design 3" />
+            <div class="card-body">
+              <form method="POST" action="/form/design3">
+                <button class="btn btn-success" type="submit">
+                  Choose this Design
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        
+        </div>
+      </div>
+    </div>
+
+
+
+    
+  </div>
+</div>
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
